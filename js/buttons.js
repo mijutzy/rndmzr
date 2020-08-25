@@ -1,6 +1,6 @@
 submit.onclick = function() {
   if (qG == true && oL == true && input.value != "") {
-    let i = input.value
+    let i = input.value.toLowerCase();
     input.value = null
     let s = listSaves.selectedList
     let rl = s.slice(5)
@@ -13,7 +13,7 @@ submit.onclick = function() {
       question.textContent = ia[ok[rI]]
       console.log("Correct")
       listSaves.totalCorrect += 1
-      listSaves.currentScore +=
+      listSaves.currentScore += 1
       verdict.style.background = "green"
       verdict.textContent = "Correct"
       findInfos()
