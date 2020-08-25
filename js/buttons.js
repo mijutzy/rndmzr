@@ -1,6 +1,6 @@
 submit.onclick = function() {
   if (qG == true && oL == true && input.value != "") {
-    let i = input.value.toLowerCase();
+    let i = input.value
     console.log(i)
     input.value = null
     let s = listSaves.selectedList
