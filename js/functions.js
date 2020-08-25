@@ -60,50 +60,51 @@ function retrieveCode() {
 }
 
 function loadCode() {
-  let sf = localStorage.getItem("ListSaveFile")
-  let d = decode(sf)
-  console.log(listSaves)
   if (!firstload) {
-    listSaves = {}
-    for (k in d) {
-      listSaves[k] = d[k]
-    }
+    console.log("!firstload == " + !firstload)
+    let sf = localStorage.getItem("ListSaveFile")
+    let d = decode(sf)
     console.log(listSaves)
-    let bts = document.getElementsByClassName('buttonLS')
-    for (i = 0; i < bts.length; i++) {
-      if (bts[i] != "PresetSave") {
-        bts[i].remove()
+    if (!firstload) {
+      listSaves = {}
+      for (k in d) {
+        listSaves[k] = d[k]
       }
-    }
-    for (k in listSaves) {
-      if (typeof listSaves[k] == typeof {}) {
-        console.log(k, listSaves[k])
-        addListToSelection(k)
+      console.log(listSaves)
+      let bts = document.getElementsByClassName('buttonLS')
+      for (i = 0; i < bts.length; i++) {
+        if (bts[i] != "PresetSave") {
+          bts[i].remove()
+        }
       }
+      for (k in listSaves) {
+        if (typeof listSaves[k] == typeof {}) {
+          console.log(k, listSaves[k])
+          addListToSelection(k)
+        }
+      }
+      localStorage.setItem("ListSaveFile", d)
+      findInfos()
     }
-    localStorage.setItem("ListSaveFile", d)
-    findInfos()
+  }
+}
+
+function altLoadCode() {
+  let obj = retrieveCode()
+  for (const alcKey in obj) {
+    console.log(typeof alcKey)
+    listSaves[alcKey] = obj[alcKey]
+    if (typeof obj[alcKey] == typeof {}) {
+      addListToSelection(alcKey)
+    }
   }
 }
 
 function restoreDefault() {
+  console.log("Restoring defaults")
   if (listSaves == {}) {
     listSaves = original
   }
 }
 
-window.onload = function() {
-  let firstload = listSaves.firstload
-  if (firstload) {
-    loadCode()
-    listSaves.firstload = false;
-  }
-}
-
-window.onunload = function() {
-  saveCode()
-}
-
-if (firstload) {
-  listSaves = original
-}
+window.onload = altLoadCode()

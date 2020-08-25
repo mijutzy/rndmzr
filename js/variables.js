@@ -2,6 +2,7 @@ var qG = false;
 var oL = false;
 var firstload = listSaves.firstload;
 
+
 const input = document.getElementById('answer')
 const submit = document.getElementById('submit')
 const question = document.getElementById('question')
@@ -26,7 +27,6 @@ const info5 = document.getElementById('info5')
 const info6 = document.getElementById('info6')
 const verdict = document.getElementById('verdict')
 const currentSession = document.getElementById('currentSession')
-const rd = document.getElementById('restoreDefault')
 
 var original =  {
   PresetSave: {

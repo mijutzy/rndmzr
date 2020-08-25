@@ -287,23 +287,3 @@ body {
   text-align: center;
   padding-top: 1%;
 }
-
-#openList {
-  background-color: rgb(25, 212, 0);
-  border-color: rgb(12, 102, 0)
-}
-
-#currentSession {
-  background-color: rgb(0, 123, 245);
-  border-color: rgb(0, 80, 158)
-}
-
-#deleteList {
-  background-color: rgb(115, 2, 0);
-  border-color: rgb(74, 1, 0);
-}
-
-#deleteAllList {
-  background-color: rgb(250, 3, 0);
-  border-color: rgb(143, 2, 0);
-}

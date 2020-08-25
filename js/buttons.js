@@ -145,26 +145,6 @@ deleteList.onclick = function() {
   }
 }
 
-deleteAllList.onclick = function() {
-  let cd = 2
-  do {
-    if (!confirm("Are you sure you want to delete all? Deleting all will \n" +
-    "remove all your existing lists and replace it with the original. \n" +
-    "Press again " + cd + " times to confirm."))
-    {
-      break
-    }
-    cd -= 1
-  } while (cd > 0)
-  if (cd === 0) {
-    let newsf = encode(original)
-    let bts = document.getElementsByClassName('buttonLS')
-    for (i = 0; i < bts.length; i++) {
-      bts[i].remove()
-    }
-  }
-}
-
 generateQuestion.onclick = function() {
   if (listSaves.selectedList != "") {
     if (oL == true) {
@@ -208,20 +188,5 @@ skipQuestion.onclick = function() {
     let m = "No question is generated to be skipped!"
     console.log(m)
     question.textContent = m
-  }
-}
-
-rd.onclick = function() {
-  let times = 1
-  do {
-    if (!confirm('Restoring defaults will reset your overall statistics\n' +
-    'Are you you want to restore defaults?'))
-    {
-      break
-    }
-    times--;
-  } while (times > 0)
-  if (times === 0) {
-    restoreDefault()
   }
 }
