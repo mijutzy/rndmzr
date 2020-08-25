@@ -116,7 +116,9 @@ body {
 }
 
 #ARI {
+  margin-top: 5vh;
   height: 50vh;
+  float: left;
 }
 
 #ARI .textInput {
@@ -146,7 +148,8 @@ body {
 }
 
 #help {
-  height: 50vh;
+  height: 30vh;
+  float: left
 }
 
 #listselection {
@@ -279,7 +282,7 @@ body {
   user-select: none;
   cursor: pointer;
   padding: 2% 3% 2%;
-  font-size: 1.1vw;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   font-size: 1.5em;
