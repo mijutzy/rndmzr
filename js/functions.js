@@ -108,7 +108,10 @@ function restoreDefault() {
 }
 
 window.onload = function() {
-  loadCode()
+  if (!firstload) {
+    loadCode()
+    listSaves.firstload = false;
+  }
 }
 
 window.onunload = function() {
