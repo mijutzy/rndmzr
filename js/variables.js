@@ -44,4 +44,5 @@ var original =  {
   totalCorrect: 0,
   totalMistakes: 0,
   currentScore: 0,
+  firstload: true,
 }
