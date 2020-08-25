@@ -1,6 +1,7 @@
 var qG = false;
 var oL = false;
-var dt = Date.now()
+var dt = Date.now
+var firstload = listSaves.firstload
 
 const input = document.getElementById('answer')
 const submit = document.getElementById('submit')

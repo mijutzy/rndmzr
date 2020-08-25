@@ -117,3 +117,7 @@ window.onload = function() {
 window.onunload = function() {
   saveCode()
 }
+
+if (firstload) {
+  listSaves = original
+}
