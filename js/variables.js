@@ -1,5 +1,6 @@
 var qG = false;
 var oL = false;
+var dt = Date.now()
 
 const input = document.getElementById('answer')
 const submit = document.getElementById('submit')
