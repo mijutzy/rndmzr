@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(35, 35, 45);
+  color: white;
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom: 300px;
+}
+
+
+#header {
+  background-color: rgb(20, 20, 30);
+  float: left;
+  width: 100%;
+  padding: 2% 1% 2%;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+#navBar {
+  background-color: rgb(30, 30, 40);
+  float: left;
+  width: 100%;
+  font-size: 1.5vw;
+  text-align: center;
+  padding: 0.5% 1% 0.5%;
+  font-style: italic;
+  user-select: none;
+}
+
+.contentColumn {
+  width: 20%;
+  height: 130vh;
+  float: left;
+  padding: 2% 1% 2%;
+}
+
+#leftCol {
+  width: 20%;
+}
+
+#middleCol {
+  width: 55%;
+}
+
+#rightCol {
+  width: 25%;
+}
+
+.modal {
+  background-color: rgb(30, 30, 40);
+  margin: 2% 1% 3%;
+  width: 90%;
+}
+
+#listContents {
+  height: 50vh;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+#listContents h1 {
+  padding: 3%;
+  text-align: center;
+
+}
+
+#listContents span {
+  float: left;
+  padding: 1.5%;
+  height: auto;
+  width: 33%;
+  background-color: rgb(30, 30, 40);
+  font-size: 2vh;
+}
+
+#listContents p {
+  background-color: rgb(30, 30, 40);
+  float: left;
+  width: 100%;
+  height: 27vh;
+  overflow-y: scroll;
+  font-size: 1vw;
+  padding: 1% 2% 2%;
+  white-space: pre;
+}
+
+#CNL {
+  height: 50vh;
+  float: left;
+}
+
+#CNL .textInput {
+  background-color: white;
+  border: none;
+  color: black;
+  width: 80%;
+  height: 3vh;
+  margin: 2.5% 10% 2.5%;
+  padding-left: 5px;
+}
+
+#NewListButton {
+  margin: 0 10% 0;
+  width: 80%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: rgb(40, 40, 50);
+}
+
+#ARI {
+  height: 50vh;
+}
+
+#ARI .textInput {
+  background-color: white;
+  border: none;
+  color: black;
+  width: 80%;
+  height: 3vh;
+  margin: 2.5% 10% 2.5%;
+  padding-left: 5px;
+}
+
+#ARI .ARIbutton {
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: rgb(40, 40, 50);
+  padding: 1%;
+  width: 70%;
+  margin: 3% 15% 3%;
+  height: 15%;
+  padding-top: 3%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8vh;
+  user-select: none;
+  cursor: pointer;
+}
+
+#help {
+  height: 50vh;
+}
+
+#listselection {
+  height: 35vh;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+#listselection .buttonLS {
+  height: auto;
+  width: 95%;
+  margin: 2%;
+  border: 2px solid white;
+  padding: 2%;
+  border-radius: 6px;
+  float: left;
+  font-size: 2vh;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+}
+
+#listselectionheader {
+  position: sticky;
+  z-index: 2;
+}
+
+.contentColumn .header {
+  height: auto;
+  background-color: rgb(20, 20, 30);
+  padding: 7% 4% 3.5%;
+  margin-bottom: 3%;
+  font-size: 3vh;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.contentColumn .text {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 5.5% 4% 7%;
+  background-color: rgb(30, 30, 40)
+}
+
+#randomization {
+  height: 60vh;
+  width: 95%;
+  margin: auto;
+  margin-top: 5%;
+  border-bottom: 15px solid rgb(20, 20, 30);
+  padding: 5%;
+}
+
+#answer {
+  background-color: white;
+  border: none;
+  width: 86%;
+  height: 5vh;
+  color: rgb(20, 20, 30);
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  font-size: 2.3vh;
+}
+
+#submit {
+  background-color: rgb(30, 30, 40);
+  border: 2px solid white;
+  border-radius: 6px;
+  width: 10%;
+  height: 5vh;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  font-size: 1.3vh;
+  user-select: none;
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
+#verdict {
+  height: 10vh;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 5vh;
+  padding-top: 2%;
+  text-align: center;
+}
+
+#question {
+  background-color: rgb(35, 35, 45);
+  width: 94%;
+  height: 20vh;
+  margin: 3% 3% 6%;
+  padding: 3%;
+  text-align: center;
+  font-size: 3vh;
+  overflow-y: scroll;
+}
+
+.button {
+  float: left;
+  height: 8vh;
+  width: 40%;
+  margin: 2% 3% 2%;
+  background-color: red;
+  border-bottom: 6px solid yellow;
+  user-select: none;
+  cursor: pointer;
+  padding: 2% 3% 2%;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button2 {
+  float: left;
+  height: 8vh;
+  width: 30%;
+  margin: 2% 1% 2%;
+  background-color: rgb(30, 30, 40);
+  border: 2px solid white;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  padding: 2% 3% 2%;
+  font-size: 1.1vw;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 1%;
+}
+
+#openList {
+  background-color: rgb(25, 212, 0);
+  border-color: rgb(12, 102, 0)
+}
+
+#currentSession {
+  background-color: rgb(0, 123, 245);
+  border-color: rgb(0, 80, 158)
+}
+
+#deleteList {
+  background-color: rgb(115, 2, 0);
+  border-color: rgb(74, 1, 0);
+}
+
+#deleteAllList {
+  background-color: rgb(250, 3, 0);
+  border-color: rgb(143, 2, 0);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
+    <!-- <script type="text/javascript" src="" defer></script> -->
+    <script type="text/javascript" src="js/listsaves.js" defer></script>
+    <script type="text/javascript" src="js/variables.js" defer></script>
+    <script type="text/javascript" src="js/functions.js" defer></script>
+    <script type="text/javascript" src="js/buttons.js" defer></script></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Randomizer</title>
+  </head>
+  <body>
+    <div id="header"><img src="img/logo.png" style="width: 10vh; position: fixed; left: 0; top: 0; background-color: rgb(20, 20, 30)">Randomizer</div>
+    <div id="navBar">Made by MijuTzy</div>
+
+    <div class="contentColumn" id="leftCol">
+      <div class="modal" id="help">
+        <div class="header">
+          Help?
+        </div>
+        <div class="text">
+          Hello!
+        </div>
+      </div>
+      <div class="modal" id="ARI">
+        <div class="header">
+          Add/Remove List Items
+        </div>
+        <input type="text" class="textInput" id="listName" placeholder="Enter the list name...">
+        <input type="text" class="textInput" id="questionValue" placeholder="Enter the question here...">
+        <input type="text" class="textInput" id="answerKey" placeholder="Enter the answer to the question here...">
+        <div class="ARIbutton" id="addItemList">Add Question-Answer Pair to List</div>
+        <div class="ARIbutton" id="remItemList">Remove Question-Answer Pair from List</div>
+        <i style="padding: 0 3% 0; background-color: rgb(30, 30, 40)">Small note: It won't work when the list doesn't exist</i>
+      </div>
+    </div>
+
+    <div class="contentColumn" id="middleCol">
+      <div class="modal" id="randomization">
+        <div id="question">
+          -Question-
+        </div>
+        <input type="text" name="answer" id="answer" placeholder="Enter answer here..."><input type="submit" name="submit" id="submit">
+        <div class="button2" id="skipQuestion">Skip Question</div>
+        <div class="button2" id="generateQuestion">Generate Question</div>
+        <div class="button2" id="restoreDefault">Restore to Default Data</div>
+      </div>
+      <div class="modal" id="verdict">
+        -VERDICT-
+      </div>
+      <div class="modal" id="listContents">
+        <h1>List Contents and Details: </h1>
+        <span id="info1">Selected list name: --</span>
+        <span id="info2">Total amount of lists: --</span>
+        <span id="info3">Total amount of pairs in list: --</span>
+        <span id="info4">Current score: --</span>
+        <span id="info5">Total Correct: --</span>
+        <span id="info6">Total Mistakes: --</span>
+        <!-- info4: highest streak; info5: total correct, info6: totalwrongs -->
+        <p id="listcontentp">
+        </p>
+      </div>
+    </div>
+
+    <div class="contentColumn" id="rightCol">
+      <div class="modal" id="listselection">
+        <div class="header" id="listselectionheader">
+          List Selection
+        </div>
+        <div class="text">
+          <div id="lists">
+            <!-- <div class="buttonLS" id="blank">Sample List</div> -->
+            <div class="buttonLS" id="list_PresetSave" onclick="selectList(this)">~PresetSave</div>
+          </div>
+        </div>
+      </div>
+      <div class="button" id="openList">Open/Reload Selected List</div>
+      <div class="button" id="currentSession">Save Current Session</div>
+      <div class="button" id="deleteList">Delete Selected List</div>
+      <div class="button" id="deleteAllList">Delete ALL Lists</div>
+      <div class="modal" id="CNL">
+        <div class="header">
+          Create new list
+        </div>
+        <input type="text" class="textInput" id="newListName" placeholder="Enter the list name...">
+        <div class="button" id="NewListButton">Create New List</div>
+      </div>
+    </div>
+  </body>
+</html>
