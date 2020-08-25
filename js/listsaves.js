@@ -13,5 +13,5 @@ var listSaves = {
   totalCorrect: 0,
   totalMistakes: 0,
   currentScore: 0,
-  firstload: true;
+  firstload: true,
 }

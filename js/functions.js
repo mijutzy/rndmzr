@@ -93,6 +93,7 @@ function restoreDefault() {
 }
 
 window.onload = function() {
+  let firstload = listSaves.firstload
   if (!firstload) {
     loadCode()
     listSaves.firstload = false;
