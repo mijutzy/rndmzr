@@ -2,11 +2,11 @@ function findInfos() {
   // nlc = non list count
   let nlc = 6
   let aL = Object.entries(listSaves).length - nlc
-  let obj = retrieveCode()
   info2.innerHTML = "Total amount of lists: " + aL
-  info4.innerHTML = "Current score: " + obj.currentScore
-  info5.innerHTML = "Total Correct: " + obj.totalCorrect
-  info6.innerHTML = "Total Mistakes: " + obj.totalMistakes
+  info4.innerHTML = "Current score: " + listSaves.currentScore
+  info5.innerHTML = "Total Correct: " + listSaves.totalCorrect
+  info6.innerHTML = "Total Mistakes: " + listSaves.totalMistakes
+  saveCode()
 }
 
 submit.onclick = function() {
