@@ -1,3 +1,14 @@
+function findInfos() {
+  // nlc = non list count
+  let nlc = 6
+  let aL = Object.entries(listSaves).length - nlc
+  let obj = retrieveCode()
+  info2.innerHTML = "Total amount of lists: " + aL
+  info4.innerHTML = "Current score: " + obj.currentScore
+  info5.innerHTML = "Total Correct: " + obj.totalCorrect
+  info6.innerHTML = "Total Mistakes: " + obj.totalMistakes
+}
+
 submit.onclick = function() {
   if (qG == true && oL == true && input.value != "") {
     let i = input.value
@@ -28,17 +39,6 @@ submit.onclick = function() {
     }
   }
 }
-
-function findInfos() {
-  // nlc = non list count
-  let nlc = 5
-  let aL = Object.entries(listSaves).length - nlc
-  info2.innerHTML = "Total amount of lists: " + aL
-  info4.innerHTML = "Current score: " + listSaves.currentScore
-  info5.innerHTML = "Total Correct: " + listSaves.totalCorrect
-  info6.innerHTML = "Total Mistakes: " + listSaves.totalMistakes
-}
-
 createList.onclick = function() {
   let nN = n.value
   if (typeof nN == typeof "string" && nN != "") {
