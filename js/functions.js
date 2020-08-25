@@ -79,8 +79,6 @@ function loadCode() {
       if (typeof listSaves[k] == typeof {}) {
         console.log(k, listSaves[k])
         addListToSelection(k)
-      } else {
-        continue
       }
     }
     localStorage.setItem("ListSaveFile", d)
