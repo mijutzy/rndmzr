@@ -63,27 +63,29 @@ function loadCode() {
   let sf = localStorage.getItem("ListSaveFile")
   let d = decode(sf)
   console.log(listSaves)
-  listSaves = {}
-  for (k in d) {
-    listSaves[k] = d[k]
-  }
-  console.log(listSaves)
-  let bts = document.getElementsByClassName('buttonLS')
-  for (i = 0; i < bts.length; i++) {
-    if (bts[i] != "PresetSave") {
-      bts[i].remove()
+  if (!firstload) {
+    listSaves = {}
+    for (k in d) {
+      listSaves[k] = d[k]
     }
-  }
-  for (k in listSaves) {
-    if (typeof listSaves[k] == typeof {}) {
-      console.log(k, listSaves[k])
-      addListToSelection(k)
-    } else {
-      continue
+    console.log(listSaves)
+    let bts = document.getElementsByClassName('buttonLS')
+    for (i = 0; i < bts.length; i++) {
+      if (bts[i] != "PresetSave") {
+        bts[i].remove()
+      }
     }
+    for (k in listSaves) {
+      if (typeof listSaves[k] == typeof {}) {
+        console.log(k, listSaves[k])
+        addListToSelection(k)
+      } else {
+        continue
+      }
+    }
+    localStorage.setItem("ListSaveFile", d)
+    findInfos()
   }
-  localStorage.setItem("ListSaveFile", d)
-  findInfos()
 }
 
 function restoreDefault() {
