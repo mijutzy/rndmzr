@@ -12,6 +12,6 @@ var listSaves = {
   questionGen: false,
   totalCorrect: 0,
   totalMistakes: 0,
-  currentScore: 0,
   firstload: true,
+  currentScore: 0,
 }
