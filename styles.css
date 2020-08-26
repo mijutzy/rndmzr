@@ -33,6 +33,10 @@ body {
   user-select: none;
 }
 
+#navBar span {
+  font-size: 12px;
+}
+
 .contentColumn {
   width: 20%;
   height: 130vh;
