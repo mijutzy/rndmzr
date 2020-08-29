@@ -256,6 +256,7 @@ importSF.onclick = function() {
     listSaves = decodedContent
     saveCode()
     altLoadCode()
+    importexportarea.value = null
   }
 }
 
