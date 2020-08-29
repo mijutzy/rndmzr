@@ -100,11 +100,9 @@ function altLoadCode() {
   }
 }
 
-function restoreDefault() {
-  console.log("Restoring defaults")
-  if (listSaves == {}) {
-    listSaves = original
+window.onload = function() {
+  altLoadCode()
+  if (patchNotesOpen == false) {
+    pNotesBG.style.display = "none";
   }
 }
-
-window.onload = altLoadCode()

@@ -13,13 +13,29 @@
     <title>RNDMZR</title>
   </head>
   <body>
+    <div id="pNotesBG">
+      <div class="modal">
+        <div class="header" id="pNoteHeader">Patch Notes</div>
+        <p id="pNotesP">
+          Version 1.1.0
+          > Added toggle buttons: you can choose whether the help panel, the add/remove item panel, the list selection panel and the create new panel can appear or not in the interface!
+          > Added import and exporting saves through the use of JSON and base64 conversion.
+          > Changes in the font sizes in order to support different monitor sizes.
+          > Added patch notes, how meta.
+
+          Version 1.0.0
+          > Initial Release
+        </p>
+        <div class="button3" id="pNotesExit">Exit?</div>
+      </div>
+    </div>
     <div id="header"><img src="img/logo.png" style="width: 10vh; position: fixed; left: 0; top: 0; background-color: rgb(20, 20, 30); z-index: 5">Randomizer</div>
-    <div id="navBar">Made by MijuTzy<br>
+    <div id="navBar">Made by MijuTzy || Version 1.1.0<br>
     <span>"Sorry if you have wrongs because of your spelling typos! This is a website rushed in 2 days in order for me to study, but I shared this to y'all because I thought people like me would find this useful. Again, sorry!"</span></div>
 
     <div class="contentColumn" id="leftCol">
       <div class="modal" id="help">
-        <div class="header">
+        <div class="header" id="helpHeader">
           Help?
         </div>
         <div class="text">
@@ -27,7 +43,7 @@
         </div>
       </div>
       <div class="modal" id="ARI">
-        <div class="header">
+        <div class="header" help="ARIHeader">
           Add/Remove List Items
         </div>
         <input type="text" class="textInput" id="listName" placeholder="Enter the list name...">
@@ -47,7 +63,11 @@
         <input type="text" name="answer" id="answer" placeholder="Enter answer here..."><input type="submit" name="submit" id="submit">
         <div class="button2" id="skipQuestion">Skip Question</div>
         <div class="button2" id="generateQuestion">Generate Question</div>
-        <div class="button2" id="restoreDefault">Useless Button. Kept for aesthetic.</div>
+        <div class="button2" id="patchNotes">Patch Notes</div>
+        <div class="button3" id="btt1">Toggle Help Description Panel</div>
+        <div class="button3" id="btt2">Toggle Add/Remove Items</div>
+        <div class="button3" id="btt3">Toggle List Selection</div>
+        <div class="button3" id="btt4">Toggle Create New List</div>
       </div>
       <div class="modal" id="verdict">
         -VERDICT-
@@ -82,11 +102,16 @@
       <div class="button2" id="currentSession">Save Current Session</div>
       <div class="button2" id="deleteList">Delete Selected List</div>
       <div class="modal" id="CNL">
-        <div class="header">
+        <div class="header" id="CNLHeader">
           Create new list
         </div>
         <input type="text" class="textInput" id="newListName" placeholder="Enter the list name...">
         <div class="button" id="NewListButton">Create New List</div>
+      </div>
+      <div class="modal" id="importExport">
+        <div class="header">Import/Export Save</div>
+        <div class="button2" id="importSF">Import file from text area</div><div class="button2" id="exportSF">Export current save file</div>
+        <textarea placeholder="Exported/Imported strings should be here..." id="importexportarea"></textarea>
       </div>
     </div>
   </body>

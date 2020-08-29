@@ -1,7 +1,12 @@
 var qG = false;
 var oL = false;
 var firstload = listSaves.firstload;
-
+var helpOpen = true;
+var ariOpen = true;
+var cnlOpen = true;
+var lsOpen = true;
+var tresBtnOpen = true;
+var patchNotesOpen = false;
 
 const input = document.getElementById('answer')
 const submit = document.getElementById('submit')
@@ -27,6 +32,26 @@ const info5 = document.getElementById('info5')
 const info6 = document.getElementById('info6')
 const verdict = document.getElementById('verdict')
 const currentSession = document.getElementById('currentSession')
+const lsheader = document.getElementById('listselectionheader')
+const cnlHeader = document.getElementById('CNLHeader')
+const ariHeader = document.getElementById('ARIHeader')
+const helpHeader = document.getElementById('helpHeader')
+const displayNoneDiv = document.getElementById('displayNoneDiv')
+const btt1 = document.getElementById('btt1')
+const btt2 = document.getElementById('btt2')
+const btt3 = document.getElementById('btt3')
+const btt4 = document.getElementById('btt4')
+const helpmodal = document.getElementById('help')
+const arimodal = document.getElementById('ARI')
+const lsmodal = document.getElementById('listselection')
+const cnlmodal = document.getElementById('CNL')
+const importSF = document.getElementById('importSF')
+const exportSF = document.getElementById('exportSF')
+const importexportarea = document.getElementById('importexportarea')
+const pNotesBG = document.getElementById('pNotesBG')
+const patchNotes = document.getElementById('patchNotes')
+const pNoteHeader = document.getElementById('pNoteHeader')
+const pNotesExit = document.getElementById('pNotesExit')
 
 var original =  {
   PresetSave: {

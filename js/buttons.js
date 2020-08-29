@@ -191,3 +191,84 @@ skipQuestion.onclick = function() {
     question.textContent = m
   }
 }
+
+// Headers: helpHeader, ariHeader, cnlHeader, lsHeader
+
+btt1.onclick = function() {
+  if (helpOpen == true) {
+    helpmodal.style.display = "none"
+    helpOpen = false
+  } else if (helpOpen == false) {
+    helpmodal.style.display = "block"
+    helpOpen = true
+  }
+}
+
+btt2.onclick = function() {
+  if (ariOpen == true) {
+    arimodal.style.display = "none"
+    ariOpen = false
+  } else if (ariOpen == false) {
+    arimodal.style.display = "block"
+    ariOpen = true
+  }
+}
+
+btt3.onclick = function() {
+  if (lsOpen == true) {
+    lsmodal.style.display = "none"
+    lsOpen = false
+  } else if (lsOpen == false) {
+    lsmodal.style.display = "block"
+    lsOpen = true
+  }
+}
+
+btt4.onclick = function() {
+  if (cnlOpen == true) {
+    cnlmodal.style.display = "none"
+    cnlOpen = false
+  } else if (cnlOpen == false) {
+    cnlmodal.style.display = "block"
+    cnlOpen = true
+  }
+}
+
+exportSF.onclick = function() {
+  if (importexportarea.value == "") {
+    console.log("Import export area is empty")
+    let e = encode(listSaves)
+    importexportarea.value = e
+    console.log('Successfully exported save! Decoded save below')
+    console.log(listSaves)
+  } else {
+    console.log("Import export area has value")
+    alert('Text area needs to be empty in order to export!')
+  }
+}
+
+importSF.onclick = function() {
+  if (importexportarea.value == "") {
+    console.log('Cannot import empty text area value')
+  } else {
+    let decodedContent = decode(importexportarea.value)
+    console.log(decodedContent)
+    listSaves = decodedContent
+    saveCode()
+    altLoadCode()
+  }
+}
+
+patchNotes.onclick = function() {
+  if (patchNotesOpen == false) {
+    pNotesBG.style.display = "block";
+    patchNotesOpen = true
+  }
+}
+
+pNotesExit.onclick = function() {
+  if (patchNotesOpen == true) {
+    pNotesBG.style.display = "none";
+    patchNotesOpen = false;
+  }
+}
