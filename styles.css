@@ -80,11 +80,16 @@ body {
 
 #listContents span {
   float: left;
-  padding: 1.5%;
-  height: auto;
+  padding: .5%;
+  height: 60px;
   width: 33%;
   background-color: rgb(30, 30, 40);
-  font-size: 18px;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+#info1 {
+  overflow-y: scroll;
 }
 
 #listContents p {
@@ -95,7 +100,7 @@ body {
   overflow-y: scroll;
   font-size: 1vw;
   padding: 1% 2% 2%;
-  white-space: pre;
+  white-space: pre-line;
 }
 
 #CNL {
@@ -112,7 +117,7 @@ body {
   width: 80%;
   height: 3vh;
   margin: 2.5% 10% 2.5%;
-  padding-left: 5px;
+  padding: 0px 5px 0px;
 }
 
 #NewListButton {
@@ -229,16 +234,20 @@ body {
 
 #randomization {
   height: auto;
-  width: 95%;
-  margin: auto;
-  margin-top: 5%;
+  width: 100%;
+  margin-top: 10px;
   border-bottom: 15px solid rgb(20, 20, 30);
-  padding: 5%;
-  padding-bottom: 2%;
+  padding: 2.5% 5% 2%;
 }
 
 #randomization .button2 {
   width: 30.5%;
+  height: 50px;
+}
+
+#btt1, #btt2, #btt3, #btt4 {
+  height: 90px;
+  padding-top: none;
 }
 
 #answer {
@@ -271,12 +280,9 @@ body {
 }
 
 #verdict {
-  height: 10vh;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 5vh;
-  padding-top: 2%;
+  height: 58px;
+  width: 100%;
+  font-size: 48px;
   text-align: center;
 }
 

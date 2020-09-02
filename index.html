@@ -17,6 +17,14 @@
       <div class="modal">
         <div class="header" id="pNoteHeader">Patch Notes</div>
         <p id="pNotesP">
+          Version 1.2.0
+          > Fixed paragraph overflow in the selection below.
+          > Fixed some CSS errors in the statistics part, and moved the list name at the center.
+          > Removed the small note
+          > Changed the location of the verdict modal at the top of the question generator tab
+          > Fixed the proportions of the question generator tab
+          > Slightly adjusted the four buttons at the question generator tab
+
           Version 1.1.0
           > Added toggle buttons: you can choose whether the help panel, the add/remove item panel, the list selection panel and the create new panel can appear or not in the interface!
           > Added import and exporting saves through the use of JSON and base64 conversion.
@@ -24,13 +32,13 @@
           > Added patch notes, how meta.
 
           Version 1.0.0
-          > Initial Release
+          > Initial Release.
         </p>
         <div class="button3" id="pNotesExit">Exit?</div>
       </div>
     </div>
     <div id="header"><img src="img/logo.png" style="width: 10vh; position: fixed; left: 0; top: 0; background-color: rgb(20, 20, 30); z-index: 5">Randomizer</div>
-    <div id="navBar">Made by MijuTzy || Version 1.1.0<br>
+    <div id="navBar">Made by MijuTzy || Version 1.2.0<br>
     <span>"Sorry if you have wrongs because of your spelling typos! This is a website rushed in 2 days in order for me to study, but I shared this to y'all because I thought people like me would find this useful. Again, sorry!"</span></div>
 
     <div class="contentColumn" id="leftCol">
@@ -51,11 +59,11 @@
         <input type="text" class="textInput" id="answerKey" placeholder="Enter the answer to the question here...">
         <div class="ARIbutton" id="addItemList">Add Question-Answer Pair to List</div>
         <div class="ARIbutton" id="remItemList">Remove Question-Answer Pair from List</div>
-        <i style="padding: 0 3% 0; background-color: rgb(30, 30, 40)">Small note: It won't work when the list doesn't exist</i>
       </div>
     </div>
 
     <div class="contentColumn" id="middleCol">
+      <div class="modal" id="verdict">-VERDICT-</div>
       <div class="modal" id="randomization">
         <div id="question">
           -Question-
@@ -66,16 +74,13 @@
         <div class="button2" id="patchNotes">Patch Notes</div>
         <div class="button3" id="btt1">Toggle Help Description Panel</div>
         <div class="button3" id="btt2">Toggle Add/Remove Items</div>
-        <div class="button3" id="btt3">Toggle List Selection</div>
+        <div class="button3" id="btt3">Toggle List Selection Panel</div>
         <div class="button3" id="btt4">Toggle Create New List</div>
-      </div>
-      <div class="modal" id="verdict">
-        -VERDICT-
       </div>
       <div class="modal" id="listContents">
         <h1>List Contents and Details: </h1>
-        <span id="info1">Selected list name: --</span>
         <span id="info2">Total amount of lists: --</span>
+        <span id="info1">Selected list name: --</span>
         <span id="info3">Total amount of pairs in list: --</span>
         <span id="info4">Current score: --</span>
         <span id="info5">Total Correct: --</span>
